@@ -5,12 +5,45 @@
 
     <Grid>
         <Image Source="florestaa.png"
-               Aspect="Fill"
+               Aspect="Fill"/>
                
-        <Image x:Name="Jogo"/>
+        <Image x:Name="Jogo"/> 
 
-     <ProgressBar x:Name="progressBarFome"
-                  ProgressColor="Blue"/>  
-  
+     
+       <Frame Background="#AAE362"
+              BorderColor="Black"
+              CornerRadius="60"
+              VerticalOptions="Start"> 
+
+          <Grid>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="40"/>
+              <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="*"/>
+            </Grid.RowDefinitions> 
+
+            <ProgressBar x:Name="progressBarFome"
+                 VerticalOptions="Start"
+                 ProgressColor="Blue"
+                 Grid.Column="1"
+                 Grid.Row="0"/> 
+            <ProgressBar x:Name="progressBarSede"
+                 VerticalOptions="Start"
+                 ProgressColor="Blue"
+                 Grid.Column="1"
+                 Grid.Row="1"/>
+
+            <ProgressBar x:Name="progressBarBrincadeira"
+                 VerticalOptions="Start"
+                 ProgressColor="Red"
+                 Grid.Column="1"
+                 Grid.Row="2"/>  
+          </Grid>
+        </Frame>
+
     </Grid>
 </ContentPage>
