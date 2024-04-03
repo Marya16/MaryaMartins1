@@ -8,7 +8,7 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
 		 
-	Jogo.Source = "girafaa.png";
+	Girafa.Source = "girafaa.png";
 	//]progressBarFome.Progress  = atual.GetFome():
 
 	

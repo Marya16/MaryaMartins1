@@ -8,20 +8,21 @@
         <Image Source="florestaaa.png"
                Aspect="Fill"/>
                
-        <Image x:Name="Jogo"
-        VerticalOptions="End"/> 
+        <Image x:Name="Girafa"
+               VerticalOptions="End"/> 
 
      
-       <Frame Background="#AAE362"
+       <Frame Background="#AEF793"
               BorderColor="Black"
+              Padding="5,10,20,5"
               CornerRadius="30"
               HeightRequest="110"
-              Margin="8,13,8,13"
+              Margin="8,13"
               VerticalOptions="Start"> 
 
           <Grid>
             <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="40"/>
+              <ColumnDefinition Width="70"/>
               <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
@@ -30,19 +31,33 @@
               <RowDefinition Height="*"/>
             </Grid.RowDefinitions> 
 
+            <Image Source="folha.png"
+                   Aspect="AspectFit"
+                   Grid.Row="0"
+                   Grid.Column="0"/>       
+
             <ProgressBar x:Name="progressBarFome"
-                 VerticalOptions="Start"
+                 VerticalOptions="Center"
                  ProgressColor="Blue"
                  Grid.Column="1"
                  Grid.Row="0"/> 
+
+            <Image Source="copo.png"
+                   Grid.Row="1"
+                   Grid.Column="0"/> 
+
             <ProgressBar x:Name="progressBarSede"
-                 VerticalOptions="Start"
+                 VerticalOptions="Center"
                  ProgressColor="Blue"
                  Grid.Column="1"
                  Grid.Row="1"/>
 
+            <Image Source="bola.png"
+                   Grid.Row="2"
+                   Grid.Column="0"/>     
+
             <ProgressBar x:Name="progressBarBrincadeira"
-                 VerticalOptions="Start"
+                 VerticalOptions="Center"
                  ProgressColor="Red"
                  Grid.Column="1"
                  Grid.Row="2"/>  
@@ -50,5 +65,43 @@
           </Grid>
         </Frame>
 
+        <Frame Background="#AEF793"
+               BorderColor="Black"
+               CornerRadius="20"
+               Margin="300,0,5,0"
+               Padding="5,10,5,5"
+               HeightRequest="280"
+               HorizontalOptions="End"> 
+
+           <Grid>
+             <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*"/>
+              
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="*"/>
+            </Grid.RowDefinitions> 
+
+               <Image Source="setaaaa.png"
+                      Grid.Column="0"
+                      Grid.Row="0"/>
+
+               <Image Source="folha.png"
+                      Grid.Column="0"
+                      Grid.Row="1"/>
+       
+               <Image Source="copo.png"
+                      Grid.Column="0"
+                      Grid.Row="2"/>
+
+               <Image Source="bola.png"
+                      Grid.Column="0"
+                      Grid.Row="3"/>       
+
+            </Grid>
+       </Frame>
     </Grid>
 </ContentPage>
