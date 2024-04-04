@@ -8,7 +8,7 @@
         <Image Source="florestaaa.png"
                Aspect="Fill"/>
                
-        <Image x:Name="Girafa"
+        <Image x:Name="Jogo"
                VerticalOptions="End"/> 
 
      
@@ -85,21 +85,25 @@
               <RowDefinition Height="*"/>
             </Grid.RowDefinitions> 
 
-               <Image Source="setaaaa.png"
-                      Grid.Column="0"
-                      Grid.Row="0"/>
+               <ImageButton Source="setaaaa.png"
+                            Clicked="Proximo"
+                            Grid.Column="0"
+                            Grid.Row="0"/>
 
-               <Image Source="folha.png"
-                      Grid.Column="0"
-                      Grid.Row="1"/>
+               <ImageButton Source="folha.png"
+                            
+                            Grid.Column="0"
+                            Grid.Row="1"/>
        
-               <Image Source="copo.png"
-                      Grid.Column="0"
-                      Grid.Row="2"/>
+               <ImageButton Source="copo.png"
+                            
+                            Grid.Column="0"
+                            Grid.Row="2"/>
 
-               <Image Source="bola.png"
-                      Grid.Column="0"
-                      Grid.Row="3"/>       
+               <ImageButton Source="bola.png"
+                            
+                            Grid.Column="0"
+                            Grid.Row="3"/>       
 
             </Grid>
        </Frame>
