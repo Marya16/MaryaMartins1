@@ -25,5 +25,11 @@ public partial class MainPage : ContentPage
 		Jogo.Source =  atual.GetNomeDaFoto();
 		progressBarFome.Progress = atual.GetFome();
 	}
+
+	void Comer (object sender, EventArgs args)		
+	{
+		 atual.SetFome(atual.GetFome()+ 0,1);
+	}
+	
 }
 

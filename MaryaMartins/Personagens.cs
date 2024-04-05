@@ -17,4 +17,8 @@ public class Personagens()
   {
     return Fome;
   }
+  public void SetFome(double 1)
+  {
+    Fome=1;
+  }
 }

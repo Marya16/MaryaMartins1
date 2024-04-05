@@ -91,20 +91,19 @@
                             Grid.Row="0"/>
 
                <ImageButton Source="folha.png"
-                            
+                            Clicked="Comer"
                             Grid.Column="0"
                             Grid.Row="1"/>
        
                <ImageButton Source="copo.png"
-                            
+                            Clicked="Beber"
                             Grid.Column="0"
                             Grid.Row="2"/>
 
                <ImageButton Source="bola.png"
-                            
+                            Clicked="Brincar"
                             Grid.Column="0"
                             Grid.Row="3"/>       
-
             </Grid>
        </Frame>
     </Grid>
