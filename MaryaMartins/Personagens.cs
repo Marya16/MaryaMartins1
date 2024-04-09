@@ -17,8 +17,24 @@ public class Personagens()
   {
     return Fome;
   }
-  public void SetFome(double 1)
+  public void SetFome(double F)
   {
-    Fome=1;
+    Fome=F;
+  }
+  public double GetSede()
+  {
+    return Sede;
+  }
+  public void SetSede(double S)
+  {
+   Sede=S;
+  }
+  public double GetBrincadeira()
+  {
+    return Brincadeira;
+  }
+  public void SetBrincadeira(double B)
+  {
+   Brincadeira=B;
   }
 }

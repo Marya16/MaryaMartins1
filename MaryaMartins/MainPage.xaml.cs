@@ -10,7 +10,11 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
 		 
-		atual=pandinha;
+		atual=pandinha; 
+
+		progressofome.Progress=atual.GetFome();
+		progressosede.Progress=atual.GetSede();
+		progressobrincadeira.Progress=atual.GetBrincadeira();
 	
 		Jogo.Source =  atual.GetNomeDaFoto();
 	}
@@ -23,13 +27,31 @@ public partial class MainPage : ContentPage
 		else if(atual == girafinha)
 			atual = pandinha;
 		Jogo.Source =  atual.GetNomeDaFoto();
-		progressBarFome.Progress = atual.GetFome();
+		progressofome.Progress = atual.GetFome();
 	}
-
+  void AtualizaPersonagem()
+  {
+	    progressofome.Progress=atual.GetFome();
+		progressosede.Progress=atual.GetSede();
+		progressobrincadeira.Progress=atual.GetBrincadeira();
+  }
 	void Comer (object sender, EventArgs args)		
 	{
-		 atual.SetFome(atual.GetFome()+ 0,1);
+		 atual.SetFome(atual.GetFome()+ 0.1);
+		 AtualizaPersonagem();
+	}
+	void Beber (object sender, EventArgs args)		
+	{
+		 atual.SetSede(atual.GetSede()+ 0.1);
+		 AtualizaPersonagem();
+	}
+	void Brincar (object sender, EventArgs args)		
+	{
+		 atual.SetBrincadeira(atual.GetBrincadeira()+ 0.1);
+		 AtualizaPersonagem();
 	}
 	
+
+
 }
 
