@@ -12,7 +12,7 @@ public class Personagens()
 
   public string GetNomeDaFoto()
   {
-    if (morto)
+    if (Morto)
       return NomedafotoMorto;
     else
       return Nomedafoto;
