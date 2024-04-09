@@ -38,7 +38,7 @@
 
             <ProgressBar x:Name="progressofome"
                  VerticalOptions="Center"
-                 ProgressColor="Blue"
+                 ProgressColor="#069618 "
                  Grid.Column="1"
                  Grid.Row="0"/> 
 

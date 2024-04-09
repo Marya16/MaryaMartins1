@@ -1,4 +1,6 @@
-﻿namespace MaryaMartins;
+﻿using Microsoft.Maui.Controls;
+
+namespace MaryaMartins;
 
 public partial class MainPage : ContentPage
 {
@@ -9,7 +11,13 @@ public partial class MainPage : ContentPage
 	public MainPage()
 	{
 		InitializeComponent();
-		 
+		  
+		var timer = Application.Current.Dispatcher.CreateTimer();
+		  timer.Interval = TimeSpan.FromSeconds(8);
+		    timer.Tick += (s,e) =>
+		  PassouTempo();
+		  timer.Start();
+
 		atual=pandinha; 
 
 		progressofome.Progress=atual.GetFome();
@@ -50,8 +58,13 @@ public partial class MainPage : ContentPage
 		 atual.SetBrincadeira(atual.GetBrincadeira()+ 0.1);
 		 AtualizaPersonagem();
 	}
-	
-
+	void PassouTempo()
+	{
+		atual.SetFome(atual.GetFome()- 0.1);
+		atual.SetSede(atual.GetSede()- 0.1);
+		atual.SetBrincadeira(atual.GetBrincadeira()- 0.1);
+		AtualizaPersonagem();
+	}
 
 }
 
