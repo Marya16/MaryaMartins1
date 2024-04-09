@@ -2,6 +2,8 @@ namespace MaryaMartins;
 
 public class Personagens() 
 {
+  protected string NomedafotoMorto;
+  protected bool Morto;
   protected double Fome;
   protected double Sede;
   protected double Brincadeira;
@@ -10,7 +12,10 @@ public class Personagens()
 
   public string GetNomeDaFoto()
   {
-    return Nomedafoto;
+    if (morto)
+      return NomedafotoMorto;
+    else
+      return Nomedafoto;
   }
 
   public double GetFome()
@@ -19,7 +24,15 @@ public class Personagens()
   }
   public void SetFome(double F)
   {
-    Fome=F;
+    if (F > 1)
+     Fome = 1;
+    else if (F < 0) 
+    { 
+      Fome = 0;
+      Morto = true;
+    }
+    else
+     Fome = F;
   }
   public double GetSede()
   {
