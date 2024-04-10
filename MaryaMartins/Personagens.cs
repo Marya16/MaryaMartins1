@@ -26,13 +26,13 @@ public class Personagens()
   {
     if (F > 1)
      Fome = 1;
-    else if (F < 0) 
-    { 
+    else if (F <= 0) 
       Fome = 0;
-      Morto = true;
-    }
     else
      Fome = F;
+
+    if(Fome <= 0.1)
+      Morto = true;
   }
   public double GetSede()
   {
@@ -40,7 +40,9 @@ public class Personagens()
   }
   public void SetSede(double S)
   {
-   Sede=S;
+    Sede=S;
+    if(Sede <= 0.1)
+      Morto = true;
   }
   public double GetBrincadeira()
   {
@@ -48,6 +50,12 @@ public class Personagens()
   }
   public void SetBrincadeira(double B)
   {
-   Brincadeira=B;
+    Brincadeira=B;
+    if(Brincadeira <= 0.1)
+      Morto = true;
   }
+  public bool GetMorto()
+   {
+    return Morto;
+   }
 }

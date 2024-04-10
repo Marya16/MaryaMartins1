@@ -5,7 +5,7 @@ public class Coala: Personagens
   
   public Coala() : base()
   {
-    NomedafotoMorto="coalamortoos.png";
+    NomedafotoMorto="morto2.png";
     Nomedafoto="coala.png";
     Fome=0.5;
     Sede=0.3;

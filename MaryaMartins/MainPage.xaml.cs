@@ -13,7 +13,7 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
 		  
 		var timer = Application.Current.Dispatcher.CreateTimer();
-		  timer.Interval = TimeSpan.FromSeconds(8);
+		  timer.Interval = TimeSpan.FromSeconds(2);
 		    timer.Tick += (s,e) =>
 		  PassouTempo();
 		  timer.Start();
@@ -60,9 +60,13 @@ public partial class MainPage : ContentPage
 	}
 	void PassouTempo()
 	{
+		var estavamorto = atual.GetMorto();
 		atual.SetFome(atual.GetFome()- 0.1);
 		atual.SetSede(atual.GetSede()- 0.1);
 		atual.SetBrincadeira(atual.GetBrincadeira()- 0.1);
+		if(estavamorto != atual.GetMorto())
+			Jogo.Source =  atual.GetNomeDaFoto();
+
 		AtualizaPersonagem();
 	}
 
