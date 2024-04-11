@@ -68,7 +68,14 @@ public partial class MainPage : ContentPage
 			Jogo.Source =  atual.GetNomeDaFoto();
 
 		AtualizaPersonagem();
-	}
 
+		if (pandinha.GetMorto()&&
+			coalinha.GetMorto()&&
+			girafinha.GetMorto())	
+		{
+			Application.Current.MainPage = new GameOverPage();
+		}
+	}
+   	
 }
 
