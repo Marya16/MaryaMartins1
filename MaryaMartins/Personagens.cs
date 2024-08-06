@@ -3,7 +3,7 @@ namespace MaryaMartins;
 public class Personagens() 
 {
   protected string NomedafotoMorto;
-  protected bool Morto;
+  protected bool Morto = false;
   protected double Fome;
   protected double Sede;
   protected double Brincadeira;
@@ -31,7 +31,7 @@ public class Personagens()
     else
      Fome = F;
 
-    if(Fome <= 0.1)
+    if(Fome <= 0.01)
       Morto = true;
   }
   public double GetSede()
@@ -40,8 +40,14 @@ public class Personagens()
   }
   public void SetSede(double S)
   {
-    Sede=S;
-    if(Sede <= 0.1)
+    if (S > 1)
+     Sede = 1;
+    else if (S <= 0) 
+      Sede = 0;
+    else
+     Sede = S;
+
+    if(Sede <= 0.01)
       Morto = true;
   }
   public double GetBrincadeira()
@@ -50,8 +56,14 @@ public class Personagens()
   }
   public void SetBrincadeira(double B)
   {
-    Brincadeira=B;
-    if(Brincadeira <= 0.1)
+    if (B > 1)
+     Brincadeira = 1;
+    else if (B <= 0) 
+      Brincadeira = 0;
+    else
+     Brincadeira = B;
+
+    if(Brincadeira <= 0.01)
       Morto = true;
   }
   public bool GetMorto()

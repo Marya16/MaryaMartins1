@@ -7,9 +7,10 @@ public class Coala: Personagens
   {
     NomedafotoMorto="morto2.png";
     Nomedafoto="coala.png";
-    Fome=0.5;
-    Sede=0.3;
-    Brincadeira=0.4;
+    Fome=0.7;
+    Sede=0.8;
+    Brincadeira=0.8;
+    Morto = false;
   }
 
 

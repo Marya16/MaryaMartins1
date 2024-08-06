@@ -10,6 +10,7 @@ public class Panda: Personagens
     Fome=1;
     Sede=1;
     Brincadeira=1;
+    Morto = false;
   }
 
 

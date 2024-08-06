@@ -7,9 +7,10 @@ public class Girafa: Personagens
   {
     NomedafotoMorto="morto2.png";
     Nomedafoto="girafaa.png";
-    Fome=0.1;
+    Fome=0.9;
     Sede=0.5;
-    Brincadeira=0.2;
+    Brincadeira=0.7;
+    Morto = false;
   }
 
 
